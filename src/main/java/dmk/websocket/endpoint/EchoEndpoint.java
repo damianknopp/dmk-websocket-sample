@@ -20,8 +20,6 @@ import javax.websocket.server.ServerEndpoint;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import dmk.websocket.config.DefaultServerEndpointConfigurator;
-
 /**
  * Bare bone JSR 356 websocket
  * 
@@ -50,9 +48,6 @@ import dmk.websocket.config.DefaultServerEndpointConfigurator;
  * </code>
  * @author dmknopp
  * 
- * 
- * Added configurator because of an IllegalArgumentExcepton when deploying to tomcat8
- * see, http://web.archiveorange.com/archive/v/8sTtqhveev4XvzSs3z1H
  *
  */
 @WebListener
