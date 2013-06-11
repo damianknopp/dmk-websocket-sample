@@ -1,14 +1,12 @@
 package dmk.websocket.endpoint;
 
 import java.io.IOException;
-import java.util.Map;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 import javax.websocket.CloseReason;
 import javax.websocket.DeploymentException;
-import javax.websocket.EndpointConfig;
 import javax.websocket.OnClose;
 import javax.websocket.OnError;
 import javax.websocket.OnMessage;
@@ -75,7 +73,7 @@ public class EchoEndpoint implements ServletContextListener {
 		if (logger.isDebugEnabled()) {
 			logger.debug("endpoint connection opened " + session.getId());
 		}
-		session.getBasicRemote().sendText("hello. connection acknowledged.");
+		session.getBasicRemote().sendText("{ \"msg\": \"hello. connection acknowledged.\" }");
 	}
 
 	@OnClose
